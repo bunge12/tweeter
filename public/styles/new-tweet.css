@@ -16,7 +16,7 @@ input[type=submit] {
   color: #fff;
   font-family: 'Bungee', sans-serif;
   font-size: medium;
-    padding: 8px;
+  padding: 8px;
 }
 
 ::-webkit-input-placeholder {

@@ -2,6 +2,7 @@ article.single_tweet {
   border: 5px solid #545149;
   padding: 1em;
   margin-top:1em;
+  opacity: 0.8;
 }
 
 article.single_tweet header {
@@ -17,6 +18,7 @@ article.single_tweet header {
 
 article.single_tweet:hover {
   box-shadow: 10px 10px #c5cbe3;
+  opacity: 1;
 }
 article.single_tweet:hover .username {
   display: block;
