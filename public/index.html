@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/single-tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -33,7 +34,7 @@
     <span>tweeter</span>
     <span class='link'><STRONG>Write</STRONG> a new tweet</span>
   </nav>
-  <header>
+  <header class='appHeader'>
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -53,11 +54,37 @@
       </form>
     </section>
     <div id="tweets">
-      <article>
-        <h2>Sergei Brinn</h2>
+      <article class="single_tweet">
+        <header>
+          <img src="https://i.imgur.com/73hZDYK.png">
+          <h2>Sergei Brinn</h2>
+          <span class='username right'>@sbrn</span>
+        </header>
         <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web
           browser today!</p>
+        <hr />
+        <footer>
+          <span>10 days ago</span>
+          <span class='right'>
+            <img scr="images/flag.png">
+          </span>
+        </footer>
       </article>
+      <article class="single_tweet">
+        <header>
+          <img src="https://i.imgur.com/73hZDYK.png">
+          <h2>Sergei Brinn</h2>
+          <span class='username right'>@sbrn</span>
+        </header>
+        <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web
+          browser today!</p>
+        <hr />
+        <footer>
+          <span>10 days ago</span>
+          <span class='right'>Like|Share</span>
+        </footer>
+      </article>
+
     </div>
   </main>
 </body>

@@ -28,6 +28,11 @@ main {
   flex-direction: column;
   background-color: #f4f1ec;
   margin: auto;
+  margin-bottom: 1em;
+}
+
+#tweets {
+  margin-top: 0.5em;
 }
 
 /*
