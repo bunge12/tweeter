@@ -45,20 +45,27 @@
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form method="post" action="/tweets/">
-        <script>$('textarea').autoResize();</script>
         <textarea name="text" id="new_tweet" placeholder="What are you humming about?" rows="2"></textarea>
         <input type="submit" value="Tweet">
         <span id="char_count" class="counter">140</span>
       </form>
     </section>
     <script>
-      const count = document.getElementById('new_tweet');
-      document.addEventListener('keyup', updateCounter);
-      function updateCounter(e) {
-        // let curr = document.getElementById("char_count").innerHTML;
-        // document.getElementById("char_count").innerHTML = curr - 1;
-        document.getElementById("char_count").innerHTML = 140 - count.value.length;
-      }
+      $(document).ready(function () {
+        /*         const count = document.getElementById('new_tweet');
+                document.addEventListener('keyup', updateCounter);
+                function updateCounter(e) {
+                  // let curr = document.getElementById("char_count").innerHTML;
+                  // document.getElementById("char_count").innerHTML = curr - 1;
+                  document.getElementById("char_count").innerHTML = 140 - count.value.length;
+                } */
+        $("#new_tweet").on('keyup', function () {
+          $("#char_count").html(140 - this.value.length);
+          if (this.value.length >= 140) {
+            $("#char_count").css("color", "red");
+          }
+        })
+      });
     </script>
 
 
