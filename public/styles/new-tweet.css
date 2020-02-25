@@ -8,5 +8,26 @@ textarea {
   border-left: none;
   border-right: none;
   font-weight: bold;
+  margin-bottom: 0.5em;
+}
 
+.button {
+  background-color: black;
+}
+
+input[type=submit] {
+  background-color: #4056A1;
+  color: #fff;
+  font-family: 'Bungee', sans-serif;
+  font-size: medium;
+    padding: 8px;
+}
+
+::-webkit-input-placeholder {
+  transform:translate3d(0,0.5em,0)
+}
+
+.counter {
+  float: right;
+  font-family: 'Bungee', sans-serif;
 }
