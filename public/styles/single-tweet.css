@@ -11,6 +11,8 @@ article.single_tweet header {
 
 .username {
   display: none;
+  font-size: larger;
+  color:  #c5cbe3;
 }
 
 article.single_tweet:hover {
@@ -41,4 +43,8 @@ article.single_tweet footer {
   padding-left: 1em;
   padding-right: 1em;
   font-size: medium;
+}
+
+article.single_tweet footer img {
+  margin-right: 10px;
 }
