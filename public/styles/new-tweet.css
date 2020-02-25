@@ -11,10 +11,6 @@ textarea {
   margin-bottom: 0.5em;
 }
 
-.button {
-  background-color: black;
-}
-
 input[type=submit] {
   background-color: #4056A1;
   color: #fff;

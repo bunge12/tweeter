@@ -15,3 +15,10 @@ nav {
 nav span {
   font-family: 'Bungee', sans-serif;
 }
+
+.link {
+  margin-left: auto;
+  order: 2;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}

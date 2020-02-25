@@ -29,6 +29,7 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
+    <span class='link'><STRONG>Write</STRONG> a new tweet</span>
   </nav>
   <header>
     <div>
@@ -44,11 +45,24 @@
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
       <form method="post" action="/tweets/">
+        <script>$('textarea').autoResize();</script>
         <textarea name="text" id="new_tweet" placeholder="What are you humming about?" rows="2"></textarea>
         <input type="submit" value="Tweet">
-        <span class="counter">140</span>
+        <span id="char_count" class="counter">140</span>
       </form>
     </section>
+    <script>
+      const count = document.getElementById('new_tweet');
+      document.addEventListener('keyup', updateCounter);
+      function updateCounter(e) {
+        // let curr = document.getElementById("char_count").innerHTML;
+        // document.getElementById("char_count").innerHTML = curr - 1;
+        document.getElementById("char_count").innerHTML = 140 - count.value.length;
+      }
+    </script>
+
+
+
     <p>Sample txt here<br /><br /><br /></p>
     <p>Sample txt here<br /><br /><br /></p>
     <p>Sample txt here<br /><br /><br /></p>
