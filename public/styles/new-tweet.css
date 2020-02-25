@@ -1,0 +1,12 @@
+textarea {
+  outline: none;
+  resize: none;
+  width: 100%;
+  border-bottom: 5px solid #545149;
+  background-color: #f4f1ec;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-weight: bold;
+
+}
