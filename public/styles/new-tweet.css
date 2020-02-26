@@ -1,3 +1,7 @@
+.new_tweet_compose {
+  margin-top: 1em;
+}
+
 textarea {
   outline: none;
   resize: none;

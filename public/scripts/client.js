@@ -7,7 +7,7 @@ const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 const createTweetElement = (tweet) => {
   const $markup = `
@@ -48,11 +48,9 @@ $(document).ready(function () {
     let form = $(this);
     if ($("#new_tweet").val().length < 1) {
       alert('Your tweet must be over 0 characters!');
-    }
-    else if ($("#new_tweet").val().length > 140) {
+    } else if ($("#new_tweet").val().length > 140) {
       alert('Your tweet can\'t be over 140 characters!');
-    }
-    else {
+    } else {
       $.ajax({
         type: 'POST',
         url: '/tweets/',
@@ -61,10 +59,13 @@ $(document).ready(function () {
           $.ajax('/tweets', { method: 'GET' })
             .then(function (data) {
               let item = data[data.length - 1];
+              $("#new_tweet").val('');
               $('#tweets').prepend(createTweetElement(item));
-            })
+            });
         }
-      })
+      }).then(function () {
+        $("#new_tweet").reset();
+      });
     }
   });
 });
@@ -73,12 +74,12 @@ $(document).ready(function () {
   $.ajax('/tweets', { method: 'GET' })
     .then(function (data) {
       renderTweets(data);
-    })
+    });
 });
 
 $(document).ready(function () {
   $(".button_new").click(function () {
-    $(".new-tweet").toggle(500);
-    $("#new_tweet").attr("autofocus");
+    $(".new_tweet_compose").slideToggle(500);
+    $("#new_tweet").focus();
   });
 });
