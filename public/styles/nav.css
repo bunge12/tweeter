@@ -31,3 +31,16 @@ nav .logo {
   margin: auto;
   -webkit-filter: invert(100%);
 }
+
+.slide_up {
+  bottom: 3%;
+    position: fixed;
+    right: 3%;
+    width: 100px;
+    border-radius: 50%;
+    display: none;
+    background-color: #f13d1f;
+    color: white;
+    padding: 20px;
+    border: none;
+}

@@ -75,4 +75,25 @@ $(document).ready(function () {
     $("#new_tweet").focus();
   });
 
+  $(document).scroll(function () {
+    let y = $(this).scrollTop();
+    if (y > 150) {
+      $(".slide_up").fadeIn();
+      $(".compose").fadeOut();
+    }
+    if (y > 300) {
+      $(".new_tweet_compose").fadeOut();
+    }
+    if (y < 150) {
+      $(".slide_up").fadeOut();
+      $(".compose").fadeIn();
+    }
+  })
+
+  $(".slide_up").click(function () {
+    window.scrollTo(0, 0);
+    $(".new_tweet_compose").slideToggle(500);
+    $("#new_tweet").focus();
+  })
+
 });
