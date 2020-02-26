@@ -45,13 +45,13 @@ const renderTweets = (tweets) => {
 $(document).ready(function () {
   $("#submit_tweet").submit(function (event) {
     event.preventDefault();
+    $(".error").remove();
     let form = $(this);
     if ($("#new_tweet").val().length < 1) {
       $("section").append("<div class='error'>Your tweet must be more than 0 characters!</div>");
     } else if ($("#new_tweet").val().length > 140) {
       $("section").append("<div class='error'>Your tweet can\'t be over 140 characters!</div>");
     } else {
-      $(".error").remove();
       $.ajax({
         type: 'POST',
         url: '/tweets/',
