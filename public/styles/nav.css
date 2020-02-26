@@ -22,3 +22,9 @@ nav span {
   font-family: 'Source Sans Pro', sans-serif;
 
 }
+
+.link img {
+  display: block;
+    margin: auto;
+    -webkit-filter: invert(100%);
+}
