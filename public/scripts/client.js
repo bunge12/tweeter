@@ -87,15 +87,14 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $("#submit_tweet").submit((event) => {
+  $("#submit_tweet").submit(function (event) {
     event.preventDefault();
     let form = $(this);
-    console.log('Button clicked, performing ajax call with : ' + form.serialize());
-
+    console.log(form.serialize());
     $.ajax({
       type: 'POST',
       url: '/tweets/',
-      body: form.serialize()
+      data: form.serialize()
     })
   });
 });
