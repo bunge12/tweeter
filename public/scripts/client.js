@@ -29,7 +29,7 @@ const createTweetElement = (tweet) => {
 
 const renderTweets = (tweets) => {
   for (const tweet of tweets) {
-    $('#tweets').append(createTweetElement(tweet));
+    $('#tweets').prepend(createTweetElement(tweet));
   }
 };
 
@@ -41,11 +41,19 @@ $(document).ready(function () {
   $("#submit_tweet").submit(function (event) {
     event.preventDefault();
     let form = $(this);
-    $.ajax({
-      type: 'POST',
-      url: '/tweets/',
-      data: form.serialize()
-    })
+    if ($("#new_tweet").val().length < 1) {
+      alert('Your tweet must be over 0 characters!');
+    }
+    else if ($("#new_tweet").val().length > 140) {
+      alert('Your tweet can\'t be over 140 characters!');
+    }
+    else {
+      $.ajax({
+        type: 'POST',
+        url: '/tweets/',
+        data: form.serialize()
+      })
+    }
   });
 });
 
