@@ -4,55 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  },
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
-
 const createTweetElement = (tweet) => {
   const $markup = `
     <article class="single_tweet">
@@ -82,19 +33,25 @@ const renderTweets = (tweets) => {
   }
 };
 
-$(document).ready(function () {
+/* $(document).ready(function () {
   renderTweets(data);
-});
+}); */
 
 $(document).ready(function () {
   $("#submit_tweet").submit(function (event) {
     event.preventDefault();
     let form = $(this);
-    console.log(form.serialize());
     $.ajax({
       type: 'POST',
       url: '/tweets/',
       data: form.serialize()
     })
   });
+});
+
+$(document).ready(function () {
+  $.ajax('/tweets', { method: 'GET' })
+    .then(function (data) {
+      renderTweets(data);
+    })
 });
