@@ -75,3 +75,10 @@ $(document).ready(function () {
       renderTweets(data);
     })
 });
+
+$(document).ready(function () {
+  $(".button_new").click(function () {
+    $(".new-tweet").toggle(500);
+    $("#new_tweet").attr("autofocus");
+  });
+});
