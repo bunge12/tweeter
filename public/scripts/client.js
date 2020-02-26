@@ -38,10 +38,6 @@ const renderTweets = (tweets) => {
   }
 };
 
-/* $(document).ready(function () {
-  renderTweets(data);
-}); */
-
 $(document).ready(function () {
   $("#submit_tweet").submit(function (event) {
     event.preventDefault();
@@ -61,24 +57,22 @@ $(document).ready(function () {
             .then(function (data) {
               let item = data[data.length - 1];
               $("#new_tweet").val('');
+              $("#char_count").html(140);
               $('#tweets').prepend(createTweetElement(item));
             });
         }
       })
     }
   });
-});
 
-$(document).ready(function () {
   $.ajax('/tweets', { method: 'GET' })
     .then(function (data) {
       renderTweets(data);
     });
-});
 
-$(document).ready(function () {
   $(".compose").click(function () {
     $(".new_tweet_compose").slideToggle(500);
     $("#new_tweet").focus();
   });
+
 });
