@@ -81,7 +81,7 @@ $(document).ready(function () {
       $(".slide_up").fadeIn();
       $(".compose").fadeOut();
     }
-    if (y > 300) {
+    if (y > 500) {
       $(".new_tweet_compose").fadeOut();
     }
     if (y < 150) {

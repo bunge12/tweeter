@@ -26,10 +26,11 @@ nav .logo {
   cursor: pointer;
 }
 
-.compose img {
+.compose img, .slide_up img {
   display: block;
   margin: auto;
   -webkit-filter: invert(100%);
+  transform: scale(1.5);
 }
 
 .slide_up {
@@ -37,10 +38,12 @@ nav .logo {
     position: fixed;
     right: 3%;
     width: 100px;
+    height: 100px;
     border-radius: 50%;
     display: none;
     background-color: #f13d1f;
     color: white;
     padding: 20px;
     border: none;
+    cursor: pointer;
 }
