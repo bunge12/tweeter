@@ -47,10 +47,11 @@ $(document).ready(function () {
     event.preventDefault();
     let form = $(this);
     if ($("#new_tweet").val().length < 1) {
-      alert('Your tweet must be over 0 characters!');
+      $("section").append("<div class='error'>Your tweet must be more than 0 characters!</div>");
     } else if ($("#new_tweet").val().length > 140) {
-      alert('Your tweet can\'t be over 140 characters!');
+      $("section").append("<div class='error'>Your tweet can\'t be over 140 characters!</div>");
     } else {
+      $(".error").remove();
       $.ajax({
         type: 'POST',
         url: '/tweets/',
@@ -63,9 +64,7 @@ $(document).ready(function () {
               $('#tweets').prepend(createTweetElement(item));
             });
         }
-      }).then(function () {
-        $("#new_tweet").reset();
-      });
+      })
     }
   });
 });

@@ -36,6 +36,18 @@ main {
   margin-top: 0.5em;
 }
 
+.error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  margin-top: 1.5em;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

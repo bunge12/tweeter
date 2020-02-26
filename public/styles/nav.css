@@ -28,6 +28,6 @@ nav .logo {
 
 .compose img {
   display: block;
-    margin: auto;
-    -webkit-filter: invert(100%);
+  margin: auto;
+  -webkit-filter: invert(100%);
 }
