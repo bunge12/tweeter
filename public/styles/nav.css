@@ -12,18 +12,21 @@ nav {
   padding: 1.5em;
 }
 
-nav span {
+nav .logo {
   font-family: 'Bungee', sans-serif;
 }
 
-.link {
+.compose {
   margin-left: auto;
   order: 2;
   font-family: 'Source Sans Pro', sans-serif;
-
+  background-color:#4056A1;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.link img {
+.compose img {
   display: block;
     margin: auto;
     -webkit-filter: invert(100%);
