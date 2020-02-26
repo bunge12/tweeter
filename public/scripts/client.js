@@ -3,6 +3,11 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+const escape = function (str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 const createTweetElement = (tweet) => {
   const $markup = `
@@ -12,7 +17,7 @@ const createTweetElement = (tweet) => {
         <h2>${tweet.user.name}</h2>
         <span class='username right'>${tweet.user.handle}</span>
       </header>
-      <p>${tweet.content.text}</p>
+      <p>${escape(tweet.content.text)}</p>
       <hr />
       <footer>
         <span>${tweet.created_at}</span>
