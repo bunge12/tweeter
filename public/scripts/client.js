@@ -51,7 +51,14 @@ $(document).ready(function () {
       $.ajax({
         type: 'POST',
         url: '/tweets/',
-        data: form.serialize()
+        data: form.serialize(),
+        complete: function () {
+          $.ajax('/tweets', { method: 'GET' })
+            .then(function (data) {
+              let item = data[data.length - 1];
+              $('#tweets').prepend(createTweetElement(item));
+            })
+        }
       })
     }
   });
