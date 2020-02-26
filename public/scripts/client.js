@@ -85,3 +85,17 @@ const renderTweets = (tweets) => {
 $(document).ready(function () {
   renderTweets(data);
 });
+
+$(document).ready(function () {
+  $("#submit_tweet").submit((event) => {
+    event.preventDefault();
+    let form = $(this);
+    console.log('Button clicked, performing ajax call with : ' + form.serialize());
+
+    $.ajax({
+      type: 'POST',
+      url: '/tweets/',
+      body: form.serialize()
+    })
+  });
+});
