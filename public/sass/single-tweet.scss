@@ -6,15 +6,55 @@
  
  article.single_tweet {
   border: $body_border;
-  padding: 10em;
+  padding: 1em;
   margin-top:1em;
   opacity: 0.75;
   word-wrap: break-word;
+  
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  h2 {
+    font-weight: 100;
+    font-size: larger;
+    display: flex;
+    margin-left: 0.5em;
+  }
+
+  hr {
+    height: 4px;
+    background-color: #545149;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: medium;
+  }
+
+  footer img {
+    margin-right: 10px;
+  }
+
 }
 
-article.single_tweet header {
-  display: flex;
-  align-items: center;
+article.single_tweet:hover {
+  box-shadow: 10px 10px #c5cbe3;
+  opacity: 1;
+  .icons {
+    display: block;
+  }
+  .username {
+    display: block;
+  }
+}
+ 
+.right {
+  margin-left: auto;
 }
 
 .username {
@@ -25,42 +65,4 @@ article.single_tweet header {
 
 .icons {
   display: none;
-}
-article.single_tweet:hover .icons {
-  display: block;
-}
-
-article.single_tweet:hover {
-  box-shadow: 10px 10px #c5cbe3;
-  opacity: 1;
-}
-article.single_tweet:hover .username {
-  display: block;
-}
-.right {
-  margin-left: auto;
-}
-
-article.single_tweet h2 {
-  font-weight: 100;
-  font-size: larger;
-  display: flex;
-  margin-left: 0.5em;
-}
-
-article.single_tweet hr {
-  height: 4px;
-  background-color: #545149;
-}
-
-article.single_tweet footer {
-  display: flex;
-  align-items: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-size: medium;
-}
-
-article.single_tweet footer img {
-  margin-right: 10px;
 }
