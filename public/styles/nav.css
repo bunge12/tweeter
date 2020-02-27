@@ -13,7 +13,6 @@ nav {
   z-index: 5;
   padding: 1.5em;
 }
-
 nav .logo {
   font-family: "Bungee", sans-serif;
 }
@@ -27,8 +26,7 @@ nav .logo {
   border: none;
   cursor: pointer;
 }
-
-.compose img, .slide_up img {
+.compose img {
   display: block;
   margin: auto;
   filter: invert(100%);
@@ -48,6 +46,12 @@ nav .logo {
   padding: 20px;
   border: none;
   cursor: pointer;
+}
+.slide_up img {
+  display: block;
+  margin: auto;
+  filter: invert(100%);
+  transform: scale(1.5);
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
