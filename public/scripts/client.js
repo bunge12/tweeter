@@ -31,7 +31,7 @@ $(document).ready(function () {
     }
   });
 
-  // Merge tweets
+  // Merge all tweets on page load
   $.ajax('/tweets', { method: 'GET' })
     .then(function (data) {
       renderTweets(data);
@@ -53,14 +53,8 @@ $(document).ready(function () {
     }
   });
 
-  // "Compose" functionality
-  $(".compose").click(function () {
-    $(".new_tweet_compose").slideToggle(500);
-    $("#new_tweet").focus();
-  });
-
-  // "Scroll up" functionality
-  $(".slide_up").click(function () {
+  // "Scroll up" & "Compose" click functionality
+  $(".slide_up, .compose").click(function () {
     window.scrollTo(0, 0);
     $(".new_tweet_compose").slideToggle(500);
     $("#new_tweet").focus();
