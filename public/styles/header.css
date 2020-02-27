@@ -1,3 +1,7 @@
+/*
+ * Styles App Header
+ */
+
 .appHeader {
   display: flex;
   flex-direction: column;
@@ -12,4 +16,17 @@
 
 header h2 {
   margin: 0px;
+}
+
+/*
+ * Styles for smaller screens
+ */
+
+@media (min-width: 1024px) {
+  .appHeader {
+   width: 35%;
+   padding: 4em;
+   margin: auto;
+   margin-top: 2em;
+  }
 }

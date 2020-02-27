@@ -1,5 +1,10 @@
+/*
+ * Styles for Compose Tweet box
+ */
+
 .new_tweet_compose {
   margin-top: 1em;
+  display: none;
 }
 
 textarea {

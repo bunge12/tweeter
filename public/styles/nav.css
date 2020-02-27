@@ -1,3 +1,6 @@
+/*
+ * Styles for Nav bar & Scroll Up button
+ */
 
 nav {
   position: fixed;
@@ -29,23 +32,23 @@ nav .logo {
 .compose img, .slide_up img {
   display: block;
   margin: auto;
-  -webkit-filter: invert(100%);
+  filter: invert(100%);
   transform: scale(1.5);
 }
 
 .slide_up {
   bottom: 3%;
-    position: fixed;
-    right: 3%;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: none;
-    background-color: #f13d1f;
-    color: white;
-    padding: 20px;
-    border: none;
-    cursor: pointer;
+  position: fixed;
+  right: 3%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: none;
+  background-color: #f13d1f;
+  color: white;
+  padding: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {

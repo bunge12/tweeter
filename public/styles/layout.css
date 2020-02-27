@@ -45,18 +45,12 @@ main {
 }
 
 /*
- * Additional CSS can be defined below or in other CSS files, as per instructions
+ * Styles for smaller screens
  */
 
  @media (min-width: 600px) and (max-width: 1023px) {
   body {
     padding-top:0px;
-  }
-  nav {
-    background-color: transparent;
-  }
-  .compose {
-    background-color: transparent;
   }
 }
 
