@@ -3,24 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const escape = function (str) {
-  let div = document.createElement('div');
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-};
 
-const daysCalculator = (timestamp) => {
-
-  let difference = Date.now() - timestamp;
-  let daysDifference = Math.floor(difference / 1000 / 60 / 60 / 24);
-  if (daysDifference < 1) {
-    result = 'Less than a day ago';
-  } else {
-    result = daysDifference + ' days ago';
-  }
-  return (result);
-
-}
 
 const createTweetElement = (tweet) => {
   const $markup = `
@@ -30,7 +13,7 @@ const createTweetElement = (tweet) => {
         <h2>${tweet.user.name}</h2>
         <span class='username right'>${tweet.user.handle}</span>
       </header>
-      <p>${escape(tweet.content.text)}</p>
+      <p>${escapeCharacters(tweet.content.text)}</p>
       <hr />
       <footer>
         <span>${daysCalculator(tweet.created_at)}</span>
