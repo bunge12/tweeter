@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../sass/new-tweet.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAIC;EACC;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA","file":"new-tweet.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/new-tweet.scss","../sass/_variables.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAMC;EACC;EACA;;;AAGF;EACE;EACA;EACA;EACA,eCXY;EDYZ;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE,kBCzBU;ED0BV;EACA,aC1BS;ED2BT;EACA;;;AAGF;EACE;;;AAGF;EACE;EACA,aCrCS","file":"new-tweet.css"}

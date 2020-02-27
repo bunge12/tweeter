@@ -2,6 +2,8 @@
  * Styles for Compose Tweet box
  */
 
+ @import 'variables';
+
  .new_tweet_compose {
   margin-top: 1em;
   display: none;
@@ -11,7 +13,7 @@ textarea {
   outline: none;
   resize: none;
   width: 100%;
-  border-bottom: 5px solid #545149;
+  border-bottom: $body_border;
   background-color: #f4f1ec;
   border-top: none;
   border-left: none;
@@ -21,9 +23,9 @@ textarea {
 }
 
 input[type=submit] {
-  background-color: #4056A1;
+  background-color: $nav_color;
   color: #fff;
-  font-family: 'Bungee', sans-serif;
+  font-family: $nav_font;
   font-size: medium;
   padding: 8px;
 }
@@ -34,5 +36,5 @@ input[type=submit] {
 
 .counter {
   float: right;
-  font-family: 'Bungee', sans-serif;
+  font-family: $nav_font;
 }
