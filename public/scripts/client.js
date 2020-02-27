@@ -9,6 +9,19 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
+const daysCalculator = (timestamp) => {
+
+  let difference = Date.now() - timestamp;
+  let daysDifference = Math.floor(difference / 1000 / 60 / 60 / 24);
+  if (daysDifference < 1) {
+    result = 'Less than a day ago';
+  } else {
+    result = daysDifference + ' days ago';
+  }
+  return (result);
+
+}
+
 const createTweetElement = (tweet) => {
   const $markup = `
     <article class="single_tweet">
@@ -20,7 +33,7 @@ const createTweetElement = (tweet) => {
       <p>${escape(tweet.content.text)}</p>
       <hr />
       <footer>
-        <span>${tweet.created_at}</span>
+        <span>${daysCalculator(tweet.created_at)}</span>
         <span class='right'>
           <img src="/images/flag.png" alt="Flag Item icon">
           <img src="/images/loop.png" alt="Repost Item icon">
@@ -80,6 +93,7 @@ $(document).ready(function () {
     if (y > 150) {
       $(".slide_up").fadeIn();
       $(".compose").fadeOut();
+      $("nav").css("background-color", "#4056A1");
     }
     if (y > 500) {
       $(".new_tweet_compose").fadeOut();

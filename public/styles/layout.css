@@ -32,10 +32,6 @@ main {
   margin-top: 1em;
 }
 
-#tweets {
-  margin-top: 0.5em;
-}
-
 .error {
   color: #721c24;
   background-color: #f8d7da;
@@ -51,3 +47,33 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media (min-width: 600px) and (max-width: 1023px) {
+  body {
+    padding-top:0px;
+  }
+  nav {
+    background-color: transparent;
+  }
+  .compose {
+    background-color: transparent;
+  }
+}
+
+ @media (min-width: 1024px) {
+   .content {
+     display: flex;
+   }
+   .appHeader {
+    width: 35%;
+    padding: 4em;
+    margin: auto;
+    margin-top: 2em;
+   }
+   main {
+    width: 50%;
+   }
+
+ }
+
+ 
