@@ -10,9 +10,9 @@ $(document).ready(function () {
     $(".error").remove();
     let form = $(this);
     if ($("#new_tweet").val().length < 1) {
-      $("section").append("<div class='error'>Your tweet must be more than 0 characters!</div>");
+      showError('Your tweet must be more than 0 characters!');
     } else if ($("#new_tweet").val().length > 140) {
-      $("section").append("<div class='error'>Your tweet can\'t be over 140 characters!</div>");
+      showError('Your tweet can\'t be over 140 characters!');
     } else {
       $.ajax({
         type: 'POST',

@@ -2,6 +2,11 @@
  * Helper functions to create & display tweets
  */
 
+// Error Generator
+const showError = (message) => {
+  return $("section").append(`<div class='error'>${message}</div>`);
+}
+
 // Escape user-input chars
 const escapeCharacters = (str) => {
   const div = document.createElement('div');
