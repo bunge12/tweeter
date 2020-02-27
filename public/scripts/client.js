@@ -93,7 +93,6 @@ $(document).ready(function () {
     if (y > 150) {
       $(".slide_up").fadeIn();
       $(".compose").fadeOut();
-      $("nav").css("background-color", "#4056A1");
     }
     if (y > 500) {
       $(".new_tweet_compose").fadeOut();
@@ -101,8 +100,6 @@ $(document).ready(function () {
     if (y < 150) {
       $(".slide_up").fadeOut();
       $(".compose").fadeIn();
-      $("nav").css("background-color", "transparent");
-
     }
   })
 

@@ -52,7 +52,6 @@ nav .logo {
 }
 
 @media (min-width: 600px) and (max-width: 1023px) {
-
   nav {
     background-color: transparent;
   }
@@ -60,3 +59,11 @@ nav .logo {
     background-color: transparent;
   }
 }
+
+@media (min-width: 1024px) {
+  nav {
+    background-color:#4056A1;
+  }
+}
+
+
