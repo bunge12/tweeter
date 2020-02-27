@@ -34,7 +34,7 @@ const createTweetElement = (tweet) => {
       <hr />
       <footer>
         <span>${daysCalculator(tweet.created_at)}</span>
-        <span class='right'>
+        <span class='right icons'>
           <img src="/images/flag.png" alt="Flag Item icon">
           <img src="/images/loop.png" alt="Repost Item icon">
           <img src="/images/heart.png" alt="Like Item icon">
@@ -101,6 +101,8 @@ $(document).ready(function () {
     if (y < 150) {
       $(".slide_up").fadeOut();
       $(".compose").fadeIn();
+      $("nav").css("background-color", "transparent");
+
     }
   })
 

@@ -16,6 +16,13 @@ article.single_tweet header {
   color:  #c5cbe3;
 }
 
+.icons {
+  display: none;
+}
+article.single_tweet:hover .icons {
+  display: block;
+}
+
 article.single_tweet:hover {
   box-shadow: 10px 10px #c5cbe3;
   opacity: 1;
