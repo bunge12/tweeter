@@ -1,7 +1,8 @@
 /*
  * Styles App Header
  */
-.appHeader {
+
+ .appHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,13 +22,12 @@ header h2 {
 /*
  * Styles for smaller screens
  */
+
 @media (min-width: 1024px) {
   .appHeader {
-    width: 35%;
-    padding: 4em;
-    margin: auto;
-    margin-top: 2em;
+   width: 35%;
+   padding: 4em;
+   margin: auto;
+   margin-top: 2em;
   }
 }
-
-/*# sourceMappingURL=header.css.map */

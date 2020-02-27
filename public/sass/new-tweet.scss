@@ -1,7 +1,8 @@
 /*
  * Styles for Compose Tweet box
  */
-.new_tweet_compose {
+
+ .new_tweet_compose {
   margin-top: 1em;
   display: none;
 }
@@ -22,18 +23,16 @@ textarea {
 input[type=submit] {
   background-color: #4056A1;
   color: #fff;
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
   font-size: medium;
   padding: 8px;
 }
 
 ::-webkit-input-placeholder {
-  transform: translate3d(0, 0.5em, 0);
+  transform:translate3d(0,0.5em,0)
 }
 
 .counter {
   float: right;
-  font-family: "Bungee", sans-serif;
+  font-family: 'Bungee', sans-serif;
 }
-
-/*# sourceMappingURL=new-tweet.css.map */
