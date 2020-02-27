@@ -1,40 +1,10 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ * Client-side JS logic
  */
 
-
-const createTweetElement = (tweet) => {
-  const $markup = `
-    <article class="single_tweet">
-      <header>
-        <img src="${tweet.user.avatars}">
-        <h2>${tweet.user.name}</h2>
-        <span class='username right'>${tweet.user.handle}</span>
-      </header>
-      <p>${escapeCharacters(tweet.content.text)}</p>
-      <hr />
-      <footer>
-        <span>${daysCalculator(tweet.created_at)}</span>
-        <span class='right icons'>
-          <img src="/images/flag.png" alt="Flag Item icon">
-          <img src="/images/loop.png" alt="Repost Item icon">
-          <img src="/images/heart.png" alt="Like Item icon">
-        </span>
-      </footer>
-    </article>
-  `;
-  return $markup;
-};
-
-const renderTweets = (tweets) => {
-  for (const tweet of tweets) {
-    $('#tweets').prepend(createTweetElement(tweet));
-  }
-};
-
 $(document).ready(function () {
+
+  // Submit tweet processor
   $("#submit_tweet").submit(function (event) {
     event.preventDefault();
     $(".error").remove();
@@ -57,20 +27,17 @@ $(document).ready(function () {
               $('#tweets').prepend(createTweetElement(item));
             });
         }
-      })
+      });
     }
   });
 
+  // Merge tweets
   $.ajax('/tweets', { method: 'GET' })
     .then(function (data) {
       renderTweets(data);
     });
 
-  $(".compose").click(function () {
-    $(".new_tweet_compose").slideToggle(500);
-    $("#new_tweet").focus();
-  });
-
+  // Show/hide "compose" and "scroll up"
   $(document).scroll(function () {
     let y = $(this).scrollTop();
     if (y > 150) {
@@ -84,12 +51,19 @@ $(document).ready(function () {
       $(".slide_up").fadeOut();
       $(".compose").fadeIn();
     }
-  })
+  });
 
+  // "Compose" functionality
+  $(".compose").click(function () {
+    $(".new_tweet_compose").slideToggle(500);
+    $("#new_tweet").focus();
+  });
+
+  // "Scroll up" functionality
   $(".slide_up").click(function () {
     window.scrollTo(0, 0);
     $(".new_tweet_compose").slideToggle(500);
     $("#new_tweet").focus();
-  })
+  });
 
 });
